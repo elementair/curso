@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutoriales</title>
+</head>
+
+<body>
+    <ul id="personas"></ul>
+    <script>
+        var persona = {
+            "nombre": "Jesus",
+            "apellido": "crisostomo",
+            "edad": 22,
+            "nickname": "fazt"
+        };
+        var personas = [{
+            "nombre": "manuel",
+            "nickname": "many"
+        }, {
+            "nombre": "antonio",
+            "nickname": "tony"
+        }, {
+            "nombre": "sebastian",
+            "nickname": "sebas"
+        }, {
+            "nombre": "socorro",
+            "nickname": "soco"
+        }]
+        var salida = '';
+        for (i = 0; i < personas.length; i++) {
+            // salida += '<li>' + personas[i].nickname + '</li>';
+            salida += `<li>${personas[i].nombre} su nikname es ${personas[i].nickname}</li>`;
+        }
+
+        document.getElementById('personas').innerHTML = salida;
+    </script>
+
+</body>
+
+</html>
